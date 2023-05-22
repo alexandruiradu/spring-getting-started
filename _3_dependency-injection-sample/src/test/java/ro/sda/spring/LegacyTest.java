@@ -3,7 +3,7 @@ package ro.sda.spring;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ro.sda.spring.without_di.EmailServiceClient;
+import ro.sda.spring.without_di.Client;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -22,7 +22,7 @@ public class LegacyTest {
 
     @Test
     public void legacyTest() {
-        EmailServiceClient app = new EmailServiceClient();
+        Client app = new Client();
 
         app.processMessage("TEST MESSAGE", "mihai@yahoo.com");
 

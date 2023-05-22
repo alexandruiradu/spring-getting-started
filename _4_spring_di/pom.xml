@@ -3,18 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>ro.sda.spring</groupId>
+        <artifactId>spring-getting-started</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>ro.sda.spring</groupId>
-    <artifactId>spring-getting-started</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>_1_lombok</module>
-        <module>_2_json</module>
-        <module>_3_dependency-injection-sample</module>
-        <module>_4_spring_di</module>
-    </modules>
+    <artifactId>_4_spring_di</artifactId>
 
     <properties>
         <maven.compiler.source>19</maven.compiler.source>
@@ -24,10 +19,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.26</version>
-            <scope>provided</scope>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>6.0.3</version>
         </dependency>
     </dependencies>
 

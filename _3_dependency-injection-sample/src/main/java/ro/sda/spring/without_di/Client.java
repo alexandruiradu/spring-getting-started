@@ -1,10 +1,10 @@
 package ro.sda.spring.without_di;
 
-public class EmailServiceClient {
+public class Client {
 
     private EmailService service;
 
-    public EmailServiceClient() {
+    public Client() {
         service = new EmailService();
     }
 

@@ -4,6 +4,6 @@ public class SlackServiceInjector implements MessageServiceInjector {
 
     @Override
     public ServiceConsumer getServiceConsumer() {
-        return new MyDiApplication(new SlackService());
+        return new ServiceClient(new SlackService());
     }
 }

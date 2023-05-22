@@ -1,10 +1,10 @@
 package ro.sda.spring.with_di;
 
-public class MyDiApplication implements ServiceConsumer {
+public class ServiceClient implements ServiceConsumer {
 
     private MessageService service;
 
-    public MyDiApplication(MessageService service) {
+    public ServiceClient(MessageService service) {
         this.service = service;
     }
 
