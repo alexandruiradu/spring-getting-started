@@ -9,11 +9,9 @@ import ro.sda.spring._1_.beans.Cat;
 @Configuration
 @ComponentScan(basePackages = "ro.sda.spring._1_.components")
 public class ProjectConfiguration {
-
     @Bean
     public Cat cat(){
         return new Cat();
     }
-
 
 }
