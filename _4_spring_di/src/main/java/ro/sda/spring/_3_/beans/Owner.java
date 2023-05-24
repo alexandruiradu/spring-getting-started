@@ -10,7 +10,7 @@ public class Owner {
 
     // annotating an instance variable with @Autowired will oblige the framework to inject
     // the dependency in this field (field injection)
-     @Autowired
+    @Autowired
     private Dog dog;
 
     public Owner(String name) {
