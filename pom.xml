@@ -16,6 +16,8 @@
         <module>_4_spring_di</module>
         <module>_5_spring-hello-service</module>
         <module>_6_spring-payment-service</module>
+        <module>_7_spring-aop</module>
+        <module>_8_spring-database-layer</module>
     </modules>
 
     <properties>
