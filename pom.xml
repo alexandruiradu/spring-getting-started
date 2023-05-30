@@ -19,6 +19,7 @@
         <module>_7_spring-aop</module>
         <module>_8_spring-database-layer</module>
         <module>_9_spring-boot-first-project</module>
+        <module>_10_spring-boot-rest-app</module>
     </modules>
 
     <properties>
