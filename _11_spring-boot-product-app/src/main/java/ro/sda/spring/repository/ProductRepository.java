@@ -45,11 +45,23 @@ public class ProductRepository {
 
     public List<Product> getAllProducts() {
         String sql = "SELECT * FROM product";
-        return jdbcTemplate.query(sql, (rs,rowNum) -> new Product(
+        return jdbcTemplate.query(sql, (rs, rowNum) -> new Product(
                 rs.getInt("id"),
                 rs.getString("name"),
                 rs.getInt("price"),
                 rs.getString("description")
         ));
+    }
+
+    public Product getById(int id) {
+        String sql = "SELECT * FROM product WHERE id = ?";
+        return jdbcTemplate.queryForObject(
+                sql,
+                (rs, rowNum) -> new Product(
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getInt("price"),
+                        rs.getString("description")),
+                id);
     }
 }

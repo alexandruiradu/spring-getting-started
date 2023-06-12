@@ -26,4 +26,9 @@ public class ProductService {
         log.info("Retrieving all products from database");
         return productRepository.getAllProducts();
     }
+
+    public Product getById(int id) {
+        log.info("Retrieving product with id {}", id);
+        return productRepository.getById(id);
+    }
 }

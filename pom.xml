@@ -21,6 +21,7 @@
         <module>_9_spring-boot-first-project</module>
         <module>_10_spring-boot-rest-app</module>
         <module>_11_spring-boot-product-app</module>
+        <module>_12_spring-boot-jpa-product-app</module>
     </modules>
 
     <properties>

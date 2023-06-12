@@ -1,10 +1,7 @@
 package ro.sda.spring.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ro.sda.spring.model.Product;
 import ro.sda.spring.service.ProductService;
 
@@ -30,6 +27,12 @@ public class ProductController {
     public List<Product> getAllProducts() {
         log.info("/product/all endpoint called");
         return productService.getAllProducts();
+    }
+
+    @GetMapping("/product/{id}")
+    public Product getById(@PathVariable int id){
+        log.info("/product/id endpoint called");
+        return productService.getById(id);
     }
 
 }
