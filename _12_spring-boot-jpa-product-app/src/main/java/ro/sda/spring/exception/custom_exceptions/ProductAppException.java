@@ -1,4 +1,4 @@
-package ro.sda.spring.exception;
+package ro.sda.spring.exception.custom_exceptions;
 
 public class ProductAppException extends RuntimeException{
 
