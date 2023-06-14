@@ -1,5 +1,6 @@
 package ro.sda.spring.controller;
 
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class ProductController {
 
     @PostMapping("/product/add")
     @ResponseStatus(HttpStatus.CREATED)
-    public void addProduct(@RequestBody Product p) {
+    public void addProduct(@Valid @RequestBody Product p) {
         log.info("/product/add endpoint called");
         service.addProduct(p);
     }
@@ -48,7 +49,7 @@ public class ProductController {
 
     @PutMapping("/product/update")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public void updateProduct(@RequestBody Product update) {
+    public void updateProduct(@Valid @RequestBody Product update) {
         service.updateProduct(update);
     }
 }
